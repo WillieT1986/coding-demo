@@ -22,7 +22,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @ExtendWith(SpringExtension.class)
-@WebMvcTest(PersonController.class)
+@WebMvcTest(PersonRestController.class)
 public class PersonMvcTest {
 
     @Resource

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Quotation</title>
+</head>
+
+    <body>
+
+        <main>
+
+            <h1>Quotes</h1>
+
+            <p>Status: <span th:text="${persons.name}"></span></p>
+            <p>Status: <span th:text="${persons.age}"></span></p>
+<!--            <p>Status: <span th:switch="${persons.age}"></span></p>-->
+<!--            <div>-->
+<!--                <p th:case="${1 < 17}">0.1</p>-->
+<!--                <p th:case="${18 < 30}">0.6</p>-->
+<!--                <p th:case="${31 < 40}">0.7</p>-->
+<!--                <p th:case="${41 < 50}">0.8</p>-->
+<!--                <p th:case="${51 < 60}">0.9</p>-->
+<!--                <p th:case="${61 < 70}">1</p>-->
+<!--            </div>-->
+            <p>Status: <span th:text="${persons.start_date}"></span></p>
+            <p>Status: <span th:text="${person.end_date}"></span></p>
+            <input type="submit" value="Submit Traveller">
+
+            </br>
+
+
+
+
+
+<!--            <span th:text="${#utilityClass.getDifferenceInDays(persons.start_date, persons.end_date)}"/>-->
+<!--            <span th:date="${persons.start_date - persons.end_date}">Number of Days</span>-->
+<!--            <div th:with="result=${persons.start_date - persons.end_date}">-->
+<!--                <span th:text="${result}"></span>-->
+<!--            </div>-->
+
+        </main>
+
+    </body>
+
+</html>
