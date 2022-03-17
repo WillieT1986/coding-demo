@@ -39,37 +39,19 @@ public class PersonControllerTest {
     }
 
 
-//    @Test
-//    public void shouldRetrieveAnyPersons() {
-//        when(personRepo.findAll()).thenReturn(Collections.singletonList(person));
-//        String result = underTest.findPersons(model);
-//        assertTrue(result, contains(any(Person.class)) != null);
-//    }
+    @Test
+    public void shouldRetrieveAnyPersons() {
+        when(personRepo.findAll()).thenReturn(Collections.singletonList(person));
+        String result = underTest.findPersons(model);
+        assertTrue(result, contains(any(Person.class)) != null);
+    }
 
-//    @Test
-//    public void shouldFindAllPersonsFromDatabase() throws PersonRestController.CannotFindException {
-//        when(personRepo.findAll()).thenReturn(Collections.singletonList(person));
-//        String result = underTest.findPersons(model);
-//        assertTrue(result, contains(person) != null);
-//    }
-
-//    @Test
-//    public void shouldGetOnePersonFromDatabase() {
-//        when(personRepo.getById(150000L)).thenReturn(person);
-//        Person result = underTest.findPerson(150000L);
-//        assertThat(result, is(person));
-//    }
-//
-//    @Test
-//    public void shouldReturnCannotFindExceptionForPersonsId() throws PersonRestController.CannotFindException {
-//        PersonRestController.CannotFindException thrown = assertThrows(
-//                PersonRestController.CannotFindException.class,
-//                () -> {
-//                    long invalidPersonId = 54L;
-//                    underTest.findPerson(invalidPersonId);
-//                });
-//        assertEquals("This Person Does Not Exist, Or Is Hidden To The World.", thrown.getMessage());
-//    }
+    @Test
+    public void shouldFindAllPersonsFromDatabase() throws PersonRestController.CannotFindException {
+        when(personRepo.findAll()).thenReturn(Collections.singletonList(person));
+        String result = underTest.findPersons(model);
+        assertTrue(result, contains(person) != null);
+    }
 
     @Test
     public void shouldAddAnIndividualPersonToModel() {
@@ -84,14 +66,6 @@ public class PersonControllerTest {
         String template = underTest.findOnePerson(1L, model);
         assertThat(template, is("person"));
     }
-
-
-
-
-
-
-
-
 
 
 }

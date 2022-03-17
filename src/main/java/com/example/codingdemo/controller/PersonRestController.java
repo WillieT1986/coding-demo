@@ -41,22 +41,22 @@ public class PersonRestController {
         }
     }
 
-//    @GetMapping("/persons")
-//    public ResponseEntity<List<Person>> getAllPersons(@RequestParam(required = false) String name) {
-//        try {
-//            List<Person> persons = new ArrayList<>();
-//            if (name == null)
-//                personRepo.findAll().forEach(persons::add);
-//            else
-//                personRepo.findPersonByName(name).forEach(persons::add);
-//            if (persons.isEmpty()) {
-//                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-//            }
-//            return new ResponseEntity<>(persons, HttpStatus.OK);
-//        } catch (Exception e) {
-//            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-//        }
-//    }
+    @GetMapping("/persons")
+    public ResponseEntity<List<Person>> getAllPersons(@RequestParam(required = false) String name) {
+        try {
+            List<Person> persons = new ArrayList<>();
+            if (name == null)
+                personRepo.findAll().forEach(persons::add);
+            else
+                personRepo.findPersonByName(name).forEach(persons::add);
+            if (persons.isEmpty()) {
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            }
+            return new ResponseEntity<>(persons, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 
     @GetMapping("/persons/{id}")
     public ResponseEntity<Person> getPersonById(@PathVariable("id") long id) {
@@ -106,7 +106,10 @@ public class PersonRestController {
         }
     }
 
-
+//    @RequestMapping("/persons")
+//    public List<Person> findPersons() {
+//        return personRepo.findAll();
+//    }
 
 
 

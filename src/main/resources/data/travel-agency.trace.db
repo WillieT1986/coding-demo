@@ -5270,3 +5270,12 @@ Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:461)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 175 more
+2022-03-17 01:59:21 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM PERSONS REFRESHTOKEN ROLES[*]"; SQL statement:
+SELECT * FROM PERSONS REFRESHTOKEN ROLES [42000-200]
+2022-03-17 01:59:25 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM PERSONS REFRESHTOKEN ROLES[*] USERS"; SQL statement:
+SELECT * FROM PERSONS REFRESHTOKEN ROLES USERS [42000-200]
+2022-03-17 01:59:27 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM PERSONS REFRESHTOKEN ROLES[*] USERS USER_ROLES"; SQL statement:
+SELECT * FROM PERSONS REFRESHTOKEN ROLES USERS USER_ROLES [42000-200]
