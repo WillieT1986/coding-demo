@@ -70,7 +70,7 @@ public class PersonControllerTest {
                                 underTest.getPersonById(invalidPersonId);
                         });
                 assertEquals("This Person Does Not Exist, Or Is Hidden To The World.", thrown.getMessage());
-//              Not sure why, but it seems the the import class for my CannotFindException refused to import at the top
+//              Not sure why, but it seems the import class for my CannotFindException refused to import at the top
 //              of the file to be nested with the rest of the Imports.
         }
 
